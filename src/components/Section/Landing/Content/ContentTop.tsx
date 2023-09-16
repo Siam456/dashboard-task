@@ -6,12 +6,12 @@ type ISearch = (_e: React.ChangeEvent<HTMLInputElement>) => void;
 
 export default function ContentTop({ search }: { search: ISearch }) {
   return (
-    <div className="min-h-12 flex items-center justify-between self-stretch">
+    <div className="min-h-12 items-center justify-between self-stretch md:flex">
       <h3 className="text-2xl font-light not-italic">
         Lean Business Model Canvas Iterations
       </h3>
       <label
-        className=" relative flex h-12 w-[512px] items-center justify-between rounded-md bg-white fill-white px-4 py-4 ring-0 focus:outline-0 focus:ring-0"
+        className=" relative flex h-12 items-center justify-between rounded-md bg-white fill-white px-4 py-4 ring-0 focus:outline-0 focus:ring-0 md:w-[512px]"
         htmlFor="search"
       >
         <input

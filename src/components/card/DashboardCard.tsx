@@ -18,7 +18,7 @@ function DashboardCard({
 
   const redirectCB = (path: string) => router.push(path);
   return (
-    <div className="flex w-[424px] flex-shrink-0 flex-col items-center rounded-lg border border-gray-200 bg-white">
+    <div className="ma:w-[424px] flex flex-shrink-0 flex-col items-center rounded-lg border border-gray-200 bg-white">
       <div className="flex flex-col items-center gap-6 self-stretch p-6">
         <div className="flex flex-col items-start gap-2 self-stretch">
           <div className="flex flex-col items-start gap-1 self-stretch">
@@ -41,7 +41,7 @@ function DashboardCard({
               {studentName}
             </p>
           </div>
-          <div className=" flex items-center justify-between self-stretch">
+          <div className=" items-center justify-between self-stretch md:flex">
             <div className="-gap-2 relative flex h-[6px] w-56 flex-col items-start justify-center overflow-hidden rounded-lg bg-gray-100">
               <span
                 style={{
@@ -54,18 +54,18 @@ function DashboardCard({
             </div>
 
             {type === 'pending' ? (
-              <p className="text-right text-xs font-extralight not-italic text-gray-400">
+              <p className="text-right text-xs font-extralight not-italic text-gray-400 max-md:my-1">
                 Draft • {draft}% Completed
               </p>
             ) : (
-              <p className="flex gap-1 text-right text-xs font-extralight not-italic text-gray-400">
+              <p className="flex justify-end gap-1 text-right text-xs font-extralight not-italic text-gray-400 max-md:my-1">
                 <Correct />
                 Final Draft Sent
               </p>
             )}
           </div>
           <div
-            className={`flex items-center justify-between self-stretch rounded-lg ${
+            className={`items-center justify-between self-stretch rounded-lg md:flex ${
               type === 'pending' ? 'bg-purple-200' : 'bg-blue-300'
             }
                px-6 py-4`}
